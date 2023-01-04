@@ -1,0 +1,12 @@
+#!/bin/sh
+set -u
+
+device=/dev/mmcblk0p2
+root=/tmp/root
+overlay=/tmp/overlay
+
+/usr/lib/system/init.sh
+/usr/lib/system/device.sh $device
+/usr/lib/system/overlay.sh $device $root $overlay
+
+exec chroot $root /sbin/init "$@"

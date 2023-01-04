@@ -1,0 +1,9 @@
+arm_64bit=1
+arm_boost=1
+kernel=kernel.img
+start_file=start.elf
+fixup_file=fixup.dat
+disable_splash=1
+disable_overscan=1
+max_framebuffers=2
+boot_delay=0

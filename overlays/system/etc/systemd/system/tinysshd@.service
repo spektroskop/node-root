@@ -1,0 +1,11 @@
+[Service]
+ExecStartPre=-/sbin/tinysshd-makekey -q /etc/sshd
+ExecStart=/sbin/tinysshd -x update=/usr/lib/system/update.sh -- /etc/sshd
+UMask=077
+KillMode=process
+SuccessExitStatus=111
+StandardInput=socket
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
