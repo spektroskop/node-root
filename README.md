@@ -1,4 +1,4 @@
-# noderoot
+# node-root
 
     build/root, setup-$PLATFORM
     configure-$PLATFORM, save-$PLATFORM,
