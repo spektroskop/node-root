@@ -1,5 +1,5 @@
 help:
-ifneq (, $(shell which gum))
+ifneq (, $(shell which gum 2> /dev/null))
 	@cat README.md | gum format
 else
 	@cat README.md
